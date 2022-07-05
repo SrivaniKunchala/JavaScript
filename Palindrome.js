@@ -14,9 +14,9 @@ function checkPalindrome(str)
     }
 
 }
-string1= "madam";
-string2= "hello";
-res1 = checkPalindrome(string1);
-res2 = checkPalindrome(string2);
+const string1= "maddam";
+const string2= "hello";
+const res1 = checkPalindrome(string1);
+const res2 = checkPalindrome(string2);
 console.log(res1);
 console.log(res2);

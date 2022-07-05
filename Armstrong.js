@@ -1,5 +1,5 @@
 let res = 0;
-const num = 371;   //153 370
+const num = 123 ;   //153 370 371
 let temp = num;
 while (temp > 0)
 {
