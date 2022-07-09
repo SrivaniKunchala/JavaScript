@@ -1,0 +1,25 @@
+//shallow Copy and Deep copy
+// shallow copy
+const student = {
+    stId : 101,
+    stName : "Jungkook",
+    stAge : 25,
+    stTotal : 520
+}
+console.log("Student Details.. ",student);
+const newStudent = student;   // shallow copying of data
+console.log("After Shallow Copying.. ",newStudent);
+newStudent.stName = "Taehyung";
+newStudent.stId = 102;
+console.log("After Changing...");
+console.log("Old Student Details.. ", student);
+console.log("New Student Details.. ", newStudent);
+
+// Deep Copy 
+const deepValue = JSON.parse(JSON.stringify(student));  // Deep copying of data
+console.log("After Deep Copying.. ",deepValue); 
+deepValue.stAge = 27 ;
+deepValue.stTotal = 550 ;
+console.log("After Modification..");
+console.log("Before data.. ",student);
+console.log("After data.. ", deepValue);
