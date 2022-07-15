@@ -18,5 +18,12 @@ const student2 = {
 }
 console.log(student2.marks.korean  );
 console.log(student1,student2);
+const add = (a,b) =>
+{
+    return a+b;
+}
 
-exports.Objects = student1 ;
+
+//exports.student1 = student1 ;
+module.exports = {student1, add};  // In the form of an object
+//exports.add = add;
