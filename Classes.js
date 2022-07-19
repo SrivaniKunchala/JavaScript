@@ -31,4 +31,4 @@ const obj2 = new student2();
 console.log(obj1.st1details());
 console.log(obj2.st2details());
 
-exports.Student1 = Student1.st1details;
+exports.obj1 = obj1;
