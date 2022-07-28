@@ -31,7 +31,7 @@ class Students extends ClosuresEx {
             this.physics = 91;
             this.chemistry = 96;
             this.total2 = this.maths + this.physics + this.chemistry;
-            console.log(`Total Marks of ${this.stName} are`, this.total2);
+            console.log(`Total Marks of ${this.stName2} are`, this.total2);
         }
         console.log(`Student2 Details...
         Student Name = ${this.stName2}
