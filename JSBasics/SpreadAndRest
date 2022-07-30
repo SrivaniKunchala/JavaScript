@@ -1,0 +1,14 @@
+//const array1 = ["Jungkook","Taehyung","Jimin","BTS"];
+//const array2 = [12,42,58,74,95];
+
+//In javascript both spread and rest operators use ... notation but both are not same
+
+//spread operator expands iterables into individual elements
+const show = (firstValue,secondValue,thirdValue,company) => `${firstValue}\t,${secondValue}\t,${thirdValue}\t works under  ${company}`;
+console.log("Spread Operator...");
+console.log(show(...["Jungkook","Teahyung","Jimin","BTS"]));         //[array1[0],array1[1],array1[2],array1[3]])
+
+//rest opeartor puts some specific user given values into an array
+const showRest = (firstValue,secondValue,...otherValues) => otherValues;
+console.log(showRest("Jungkook","Taehyung","Jimin","Yoongi","Hobi")); // shows the remaining values in the array
+
