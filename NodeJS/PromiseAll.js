@@ -26,7 +26,7 @@ const { resolve } = require("path");
 
 
 const name = 'Srivani Kunchala'
-const age = 24
+const age = 0
 const collegeName = 'MLR'
 const batchNo = 2020
 
