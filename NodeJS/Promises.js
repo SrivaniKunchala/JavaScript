@@ -29,8 +29,8 @@ p.then((result) => {
         }
     })
 }).then((result) => {
-    console.log(result)
-    return new Promise ((resolve,rejects) => {   // square root of sum
+    console.log(result)  //even
+    return new Promise ((resolve,rejects) => {   // square root of even sum
         let square = sum * sum
         resolve(`the square of ${sum} is ${square}`)
         
