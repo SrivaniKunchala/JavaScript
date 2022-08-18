@@ -34,7 +34,41 @@ const getOrders = async () => {
 
   }
 
+  const aggorders3 = async()=>{
+    await client.connect();
+    const criteria = [
+      {"$match": { "ShipPostalCode":51100 , OrderID: 10248} },
+      {$group :{
+        _id:{"RequiredDate": "$RequiredDate","ShippedDate":"$ShippedDate"}, count: { $sum: 1 }}}
+
+    ];
+    const res = collection.aggregate(criteria);
+    for await (const r of res){
+      console.log(r);
+    }
+  }
+
+  const aggorders4 = async()=> {
+    await client.connect();
+    const criteria = [
+      { "$match": { "CustomerID":"VINET" , "ShipCountry": "France"} },
+     { $group:{
+        _id:{"OrderID": "$OrderID",
+        "ShippedDate":"$ShippedDate",
+        "ShipName":"$ShipName",
+        "ShipAddress":"$ShipAddress"}, count: { $sum: 1 }}}
+
+    ];
+    const res = collection.aggregate(criteria);
+    for await (const r of res){
+      console.log(r);
+    }
+
+  }
+
 
   //getOrders().then(console.log).catch(console.error);
 //aggorders1().then(res=()=> console.log(res)).catch(console.error);
-aggorders2().then(res=()=>console.log(res)).catch(console.error);
+//aggorders2().then(res=()=>console.log(res)).catch(console.error);
+// aggorders3().then(res=()=>console.log(res)).catch(console.error);
+aggorders4().then(res=()=>console.log(res)).catch(console.error);
